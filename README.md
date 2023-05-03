@@ -1,2 +1,2 @@
-# Jqurey_second
- it is my second jquery class
+# Javascript_first_class
+ first learning day
