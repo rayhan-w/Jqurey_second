@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="me.css">
 
     <style>
         #container {
@@ -126,7 +127,31 @@
 <button>click for start the animation</button><br><br>
 <div id="animation">
 
-</div>
+</div><br><br>
+
+<button id="stop">Stop sliding</button><br>
+
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div><br><br>
+
+<p>Name: <input type="text" id="test" value="Rayhan Khan"></p>
+
+<button>Show Value</button><br><br>
+
+<p><a href="https://www.facebook.com/" id="w3s">Facebook.com</a></p>
+
+<button>Show the <link rel="stylesheet" href=""></button><br><br>
+
+
+<p id="test1">This is a pragraph</p>
+<p id="test2">This is another paragraph.</p>
+
+<p>Input field: <input type="text" id="test3" value="Rayhan khan"></p>
+
+<button id="btn1">set text</button>
+<button id="btn2">set html</button>
+<button id="btn3">set value</button>
+
 
 
 
@@ -193,6 +218,33 @@ $(document).ready(function(){
       height: 'toggle'
     });
   });
+
+  $("#flip").click(function(){
+    $("#panel").slideDown(5000);
+  });
+  $("#stop").click(function(){
+    $("#panel").stop();
+  });
+
+  
+  $("button").click(function(){
+    alert("Value: " + $("#test").val());
+  });
+
+  $("button").click(function(){
+    alert($("#w3s").attr("href"));
+  });
+
+  $("#btn1").click(function(){
+    $("#test1").text("Hello world!");
+  });
+  $("#btn2").click(function(){
+    $("#test2").html("<b>Hello world!</b>");
+  });
+  $("#btn3").click(function(){
+    $("#test3").val("Dolly Duck");
+  });
+
 });
 
 
